@@ -1,6 +1,8 @@
 Example Voting App
 =========
 
+Adding a simple comment :)
+
 Getting started
 ---------------
 
