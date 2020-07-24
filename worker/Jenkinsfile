@@ -50,5 +50,11 @@ pipeline {
         always {
             echo 'Pipeline for worker app is complete'
         }
+        failure {
+            slackSend (channel: "testing" message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+        }
+        success {
+            slackSend (channel: "testing" message: "Build Succeeded - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+        }
     }
 }
