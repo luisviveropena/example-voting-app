@@ -1,9 +1,7 @@
 pipeline {
 
-    agent any
-
-    tools {
-        nodejs 'NodeJS test'
+    agent {
+        docker {image 'node:alpine'}
     }
 
     stages {
