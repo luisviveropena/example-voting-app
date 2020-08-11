@@ -49,6 +49,7 @@ pipeline {
         stage('docker-package') {
             when{
               #branch 'master'
+              # Adding a comment to trigger the pipeline
               changeset "**/worker/**"
             }
             steps {
